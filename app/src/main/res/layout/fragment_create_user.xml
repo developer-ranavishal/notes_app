@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateUserFragment">
+
+    <EditText
+        android:id="@+id/cr_usernameETxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="enter name.."
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cr_UserMobETxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/cr_UserNoteETxt"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        android:background="#F0F4C3"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:gravity="top|left"
+        android:hint="@string/userNote"
+        android:inputType="textMultiLine"
+        android:lineSpacingMultiplier="1.5"
+        android:padding="8dp"
+        android:scrollbars="horizontal|vertical"
+        android:textColor="@color/black"
+        android:textColorHint="#4DB6AC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cr_UserMobETxt" />
+
+    <EditText
+        android:id="@+id/cr_UserMobETxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="+91 . . . . . . . . ."
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/cr_UserNoteETxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cr_usernameETxt" />
+
+    <Button
+        android:id="@+id/cr_SaveUserBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:fontFamily="cursive"
+        android:text="Save User"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cr_UserNoteETxt"
+        app:layout_constraintVertical_bias="0.275" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

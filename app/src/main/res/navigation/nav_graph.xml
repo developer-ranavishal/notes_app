@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listUserFragment">
+
+    <fragment
+        android:id="@+id/listUserFragment"
+        android:name="com.example.notes_app.ListUserFragment"
+        android:label="User List"
+        tools:layout="@layout/fragment_list_user">
+        <action
+            android:id="@+id/action_listUserFragment_to_createUserFragment"
+            app:destination="@id/createUserFragment" />
+        <action
+            android:id="@+id/action_listUserFragment_to_updateUserFragment"
+            app:destination="@id/updateUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createUserFragment"
+        android:name="com.example.notes_app.CreateUserFragment"
+        android:label="Create User"
+        tools:layout="@layout/fragment_create_user">
+        <action
+            android:id="@+id/action_createUserFragment_to_listUserFragment"
+            app:destination="@id/listUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateUserFragment"
+        android:name="com.example.notes_app.UpdateUserFragment"
+        android:label="Update User"
+        tools:layout="@layout/fragment_update_user">
+        <action
+            android:id="@+id/action_updateUserFragment_to_listUserFragment"
+            app:destination="@id/listUserFragment" />
+        <argument
+            android:name="userNote"
+            app:argType="com.example.notes_app.room_component.UserNote" />
+    </fragment>
+</navigation>

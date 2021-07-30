@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">notes_app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="userNote"> awesome! we can add here our desirable<br /> story or notes....</string>
+</resources>
